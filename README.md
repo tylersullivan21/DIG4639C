@@ -1,1 +1,2 @@
 # DIG4639C
+### This repository was created for Labs and Projects for DIG4639C. <br/> The repository was build with a node .gitignore file and GNU Lesser General Public License v3.0 which meet the requirements of lab 0 by creating an emtpy repository with a .gitignore file.  
