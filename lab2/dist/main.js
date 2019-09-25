@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".card{\\n    background-color: magenta;\\n    color: white;\\n}\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/components/card/index.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".card {\\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\\n    max-width: 300px;\\n    margin: auto;\\n    text-align: center;\\n    }\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/components/card/index.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
