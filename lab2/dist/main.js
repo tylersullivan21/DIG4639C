@@ -164,7 +164,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Element_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Element.js */ \"./src/Element.js\");\n/* harmony import */ var _components_card_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/card/index.js */ \"./src/components/card/index.js\");\n\n\n\nlet card = new _components_card_index_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({content: \"This is content that belongs in the card\"});\n\n\nlet element = new _Element_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"div\");\n\nelement.render(card.render());\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Element_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Element.js */ \"./src/Element.js\");\n/* harmony import */ var _components_card_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/card/index.js */ \"./src/components/card/index.js\");\n\n\n\nlet card = new _components_card_index_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({content: \"This is content that belongs in the card\"});\n\nlet element = new _Element_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"div\");\n\nelement.render(card.render());\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
