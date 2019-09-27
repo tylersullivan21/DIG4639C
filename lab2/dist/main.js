@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".card {\\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\\n    max-width: 300px;\\n    margin: auto;\\n    text-align: center;\\n    }\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/components/card/index.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".card {\\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\\n    max-width: 300px;\\n    height: 300px;\\n    background-color: magenta;\\n    color: white;\\n    margin: auto;\\n    text-align: center;\\n    padding: 10px;\\n    }\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/components/card/index.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -152,7 +152,7 @@ eval("var content = __webpack_require__(/*! !../../../node_modules/css-loader/di
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/components/card/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass Card{\nconstructor(props){\n    this.props = props; \n}\n\nrender(){\nreturn `<div class=\"card\"> ${this.props.content}</div>`\n}\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Card);\n\n//# sourceURL=webpack:///./src/components/card/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/components/card/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass Card{\nconstructor(props){\n    this.props = props; \n}\n\nrender(){\nreturn `<div class=\"card\"> ${this.props.content}\n<h1>This is an h1</h1>\n<p>This is content that will fill up the card that goes inside the card which is a very interesting magenta card.</p></div>`\n\n}\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Card);\n\n//# sourceURL=webpack:///./src/components/card/index.js?");
 
 /***/ }),
 
@@ -164,7 +164,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Element_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Element.js */ \"./src/Element.js\");\n/* harmony import */ var _components_card_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/card/index.js */ \"./src/components/card/index.js\");\n\n\n\nlet card = new _components_card_index_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({content: \"This is content that belongs in the card\"});\n\nlet element = new _Element_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"div\");\n\nelement.render(card.render());\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Element_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Element.js */ \"./src/Element.js\");\n/* harmony import */ var _components_card_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/card/index.js */ \"./src/components/card/index.js\");\n\n\n\nlet card = new _components_card_index_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({content: \"This is content that belongs in the card\"});\n\n\nlet element = new _Element_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"div\");\n\nelement.render(card.render());\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
