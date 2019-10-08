@@ -21,7 +21,7 @@ class App extends React.Component {
         >
           Learn React
         </a>
-        <Example />
+        <Card className="card" content="This is a card " />
       </header>
     </div>
   );

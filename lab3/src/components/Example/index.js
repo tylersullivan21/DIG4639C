@@ -8,6 +8,9 @@ constructor(props){
     this.state = {date: new Date(), countdown:5};
     this.setTime();
 }
+createConfetti() {
+    
+}
 
 setTime() {
     setInterval(
