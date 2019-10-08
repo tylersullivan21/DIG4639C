@@ -5,7 +5,7 @@ class Example extends React.Component{
 constructor(props){
     super(props);
 
-    this.state = {date: new Date()};
+    this.state = {date: new Date(), countdown:5};
     this.setTime();
 }
 
@@ -20,9 +20,12 @@ setTime() {
 
 render(){
     return (
-    
+    <div>
 <h1>{this.state.date.toLocaleTimeString()}</h1>
-
+<p>
+<h2>{this.state.countdown} seconds left!</h2>
+</p>
+</div>
     );
 }
 
