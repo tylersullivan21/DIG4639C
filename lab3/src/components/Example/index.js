@@ -25,9 +25,7 @@ render(){
     return (
     <div>
 <h1>{this.state.date.toLocaleTimeString()}</h1>
-<p>
-<h2>{this.state.countdown} seconds left!</h2>
-</p>
+
 </div>
     );
 }
