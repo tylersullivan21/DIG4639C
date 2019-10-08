@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Card from './components/Card/index.js'
+import Example from './components/Example/index.js'
 
 class App extends React.Component {
   render(){
@@ -20,6 +21,7 @@ class App extends React.Component {
         >
           Learn React
         </a>
+        <Example />
       </header>
     </div>
   );
