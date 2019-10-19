@@ -11,6 +11,26 @@ class CardList extends React.Component {
     this.state = {cards: data.cards};
 
   }
+  //adding a function to add cards
+
+  addCard = () => {
+let cards = this.state.cards;
+cards.push();
+
+this.setState({cards: cards});
+  }
+  
+  showCards() {
+
+    return(
+      <ul>
+      {this.state.cards.map((card, index) => {
+        return (<li key={index}>{card}</li>);
+      })}
+      </ul>
+    );
+
+  }
 
   remove = (event) => {
     
