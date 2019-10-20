@@ -55,7 +55,7 @@ this.setState({cards: cards});
                     key={index}
                     title={card.title} 
                     content={card.content}
-                    dataclick={this.removecard} />
+                    dataclick={this.remove} />
             })
           }
       </div>
