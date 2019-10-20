@@ -38,11 +38,11 @@ this.setState({cards: cards});
 
     let localCards = this.state.cards;
 
-    let changedCards = localCards.filter((card) => {
+    let fixedCards = localCards.filter((card) => {
       return card.title !== datatitle;
     });
 
-    this.setState({cards: changedCards});
+    this.setState({cards: fixedCards});
 
   }
 
