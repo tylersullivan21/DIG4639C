@@ -5,6 +5,8 @@ class Cardlist extends Component {
   state = {
     periods: []
   };
+
+  /* met requirement by using fetch to correctly retrieve data from posted API*/
   componentDidMount() {
     fetch("https://api.weather.gov/gridpoints/MLB/25,69/forecast")
       .then(res => res.json())

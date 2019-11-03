@@ -4,7 +4,7 @@ import "./index.css";
 const Card = props => {
   const { periods } = props;
   return (
-   
+   /*met requirements by creating cards by pulling in data from api with period.name, temp,unit, forecast*/
     <div>
       {{ periods }.periods.map((period, index) => (
         <div className="card" key={index}>
