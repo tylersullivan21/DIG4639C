@@ -6,7 +6,7 @@ const Card = props => {
   console.log({ periods }.periods);
   return (
       /* react.fragment used to group list of children*/
-    <React.Fragment>
+    <div>
       {{ periods }.periods.map((period, index) => (
         <div className="card" key={index}>
           <div className="card-name-section">
@@ -21,7 +21,7 @@ const Card = props => {
           </div>
         </div>
       ))}
-    </React.Fragment>
+    </div>
   );
 };
 
