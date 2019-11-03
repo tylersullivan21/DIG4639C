@@ -9,9 +9,8 @@ class Cardlist extends Component {
     fetch("https://api.weather.gov/gridpoints/MLB/25,69/forecast")
       .then(res => res.json())
       .then(result => {
-        const localperiods = result.properties.periods;
-        // console.log(localperiods);
-        this.setState({ periods: localperiods });
+        const localperiod = result.properties.periods;
+        this.setState({ periods: localperiod});
       });
   }
   render() {
