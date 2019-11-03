@@ -5,6 +5,7 @@ const Card = props => {
   const { periods } = props;
   console.log({ periods }.periods);
   return (
+      /* react.fragment used to group list of children*/
     <React.Fragment>
       {{ periods }.periods.map((period, index) => (
         <div className="card" key={index}>
