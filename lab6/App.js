@@ -1,22 +1,28 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
+import CardList from "./components/CardList"
 
-class App extends React.Component {
-  render(){
-  return (
-    <View style={styles.container}>
-      <Text>My favorite video game is MLB The Show 19</Text>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
+const nativeStyles = StyleSheet.create({
+  text1: {
+    backgroundColor: "magenta",
+    color: "cyan",
+    margin: 50
+  }
+})
+
+ class App extends React.Component {
+  render() {
+    return (
+      <View>
+        <Text>My favorite game is MLB the Show 2019</Text>
+        <Text>The Main Reason that I am a fan of the game is that because I am a baseball fan at heart.</Text>
+        <Text style={nativeStyles.text1}>
+          Look! It's an example!
+        </Text>
+        <CardList />
+      </View>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
