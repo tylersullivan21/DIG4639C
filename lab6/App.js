@@ -1,12 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text } from 'react-native';
 
-export default function App() {
+class App extends React.Component {
+  render(){
   return (
     <View style={styles.container}>
+      <Text>My favorite video game is MLB The Show 19</Text>
       <Text>Open up App.js to start working on your app!</Text>
     </View>
   );
+}
 }
 
 const styles = StyleSheet.create({
