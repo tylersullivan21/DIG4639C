@@ -1,8 +1,7 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import CardList from "./components/CardList"
+import {  Text, View, StyleSheet } from 'react-native';
 
-const nativeStyles = StyleSheet.create({
+const uniqueStyles = StyleSheet.create({
   text1: {
     backgroundColor: "magenta",
     color: "cyan",
@@ -14,12 +13,11 @@ const nativeStyles = StyleSheet.create({
   render() {
     return (
       <View>
-        <Text>My favorite game is MLB the Show 2019</Text>
-        <Text>The Main Reason that I am a fan of the game is that because I am a baseball fan at heart.</Text>
-        <Text style={nativeStyles.text1}>
-          Look! It's an example!
-        </Text>
-        <CardList />
+       
+        <Text style={uniqueStyles.text1}>My favorite movie is Monsters Inc</Text>
+       
+        <Text style={uniqueStyles.text1}>One of the reasons Monsters Inc is my favorite movie is because growing up when I played baseball my nickname was sully due to my name being James T Sullivan. This sounded very similar to James P Sullivan and led to me having a bond with the character and the movie.</Text>
+   
       </View>
     );
   }
