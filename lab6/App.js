@@ -2,7 +2,7 @@ import React from 'react';
 
 import {  Text, View, StyleSheet } from 'react-native';
 import { SocialIcon } from 'react-native-elements'
-import { checkForUpdateAsync } from 'expo/build/Updates/Updates';
+import { Icon } from 'react-native-elements'
 
 const uniqueStyles = StyleSheet.create({
   
@@ -39,6 +39,18 @@ backGroundStyles:{
   title='Sign In With Twitter'
   button
   type='twitter'
+/>
+<Icon
+  name='rowing' />
+
+<Icon
+  name='g-translate'
+  color='#00aced' />
+<Icon
+  reverse
+  name='ios-american-football'
+  type='ionicon'
+  color='#517fa4'
 />
 <Text style={uniqueStyles.textStyles}>Played around with added more react native elements by adding sign in button for twitter and facebook</Text>
       </View>
