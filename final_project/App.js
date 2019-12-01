@@ -1,13 +1,51 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {added: {}};
+
+  }
+
+  componentDidMount() {
+
+    fetch("https://apiexample.website/contacts/add", {
+      "method": "POST",
+      "headers": {
+        "api": "sullivan",
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      "body": JSON.stringify({
+        "name": "tyler",
+        "number": "8989"
+      })
+    })
+    .then(response => response.json() )
+    .then((data) => this.setState({added: data.added}) )
+    .catch(err => {
+      console.log(err);
+    });
+
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Added</h2>
+        <p>{this.state.added.name}</p>
+        <p>{this.state.added.number}</p>
+      </div>
+    );
+  }
 }
+
+export default App;
+
 
 const styles = StyleSheet.create({
   container: {
