@@ -1,57 +1,71 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  SectionList,
+} from 'react-native';
+import Constants from 'expo-constants';
 
 
-class App extends Component {
+const DATA = [
+  {
+    title: 'Main dishes',
+    data: ['Pizza', 'Burger', 'Risotto'],
+  },
+  {
+    title: 'Sides',
+    data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
+  },
+  {
+    title: 'Drinks',
+    data: ['Water', 'Coke', 'Beer'],
+  },
+  {
+    title: 'Desserts',
+    data: ['Cheese Cake', 'Ice Cream'],
+  },
+];
 
-  constructor(props) {
-    super(props);
-
-    this.state = {added: {}};
-
-  }
-
-  componentDidMount() {
-
-    fetch("https://apiexample.website/contacts/add", {
-      "method": "POST",
-      "headers": {
-        "api": "sullivan",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "body": JSON.stringify({
-        "name": "tyler",
-        "number": "8989"
-      })
-    })
-    .then(response => response.json() )
-    .then((data) => this.setState({added: data.added}) )
-    .catch(err => {
-      console.log(err);
-    });
-
-  }
-
-  render() {
-    return (
-      <div>
-        <h2>Added</h2>
-        <p>{this.state.added.name}</p>
-        <p>{this.state.added.number}</p>
-      </div>
-    );
-  }
+function Item({ title }) {
+  return (
+    <View style={styles.item}>
+      <Text style={styles.title}>{title}</Text>
+    </View>
+  );
 }
 
-export default App;
-
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <SectionList
+        sections={DATA}
+        keyExtractor={(item, index) => item + index}
+        renderItem={({ item }) => <Item title={item} />}
+        renderSectionHeader={({ section: { title } }) => (
+          <Text style={styles.header}>{title}</Text>
+        )}
+      />
+    </SafeAreaView>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: Constants.statusBarHeight,
+    marginHorizontal: 16,
+  },
+  item: {
+    backgroundColor: '#f9c2ff',
+    padding: 20,
+    marginVertical: 8,
+  },
+  header: {
+    fontSize: 32,
+  },
+  title: {
+    fontSize: 24,
   },
 });
