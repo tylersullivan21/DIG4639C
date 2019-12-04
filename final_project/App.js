@@ -9,6 +9,7 @@ import {
 import Constants from 'expo-constants';
 
 
+
 const DATA = [
   {
     title: 'Main dishes',
