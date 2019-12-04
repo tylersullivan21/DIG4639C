@@ -1,6 +1,5 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
-import { HitTestResultTypes } from 'expo/build/AR';
+import  React from 'react';
+
 
 export default class Addcontact extends React.Component{
    
@@ -11,9 +10,11 @@ super(props);
 this.state = {data: []};
     }
 
-    addContact() {
-window.fetch("https://apiexample.website/contacts/add", {
-    "method": "POST",
+
+    
+    addContact()  {
+window.fetch("https://apiexample.website/contacts/", {
+    "method": "GET",
     "headers": {
        "api": "sullivan",
        "Content-Type": "application/json",
@@ -31,30 +32,27 @@ window.fetch("https://apiexample.website/contacts/add", {
 });
 }
 
+    }
+/*
+    render(){
 
-render(){
-
-  return(
-  <View>
-      
-  <Button  
-  title="submit"
-  onPress={ () => this.postData() }
-  />
-  </View>
-  
-  
-  
-  );
-  
-  
-  
-  
-      }
-  
-
+return(
+<View style={styles.container}>
     
+<Button  
+title="submit"
+onPress={ () => this.postData() }
+/>
+</View>
 
+
+
+)
+
+
+
+
+    }
 
 
 
