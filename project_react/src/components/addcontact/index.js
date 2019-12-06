@@ -1,63 +1,58 @@
 import React, { Component } from 'react';
 
-class Add extends React.Component {
+
+class Add extends Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {
-        name: "",
-        number: ""
-      };
+    this.state = {added: {}};
+
   }
 
- 
-
-
- componentDidMount(){
-
-const addName = document.getElementById("name").value
-const addNumber = document.getElementById("number").value
+ createContact = () => {
 
     fetch("https://apiexample.website/contacts/add", {
-      method: "POST",
-      headers: {
-        api: "sullivan",
+      "method": "POST",
+      "headers": {
+        "api": "sullivan",
         "Content-Type": "application/json",
-        Accept: "application/json"
+        "Accept": "application/json"
       },
-      body: JSON.stringify({
-        name: addName,
-        number: addNumber
+      "body": JSON.stringify({
+        "name": this.state.name,
+        "number": this.state.number
       })
     })
-    .then(this.updateContactList())
+    .then(response => response.json() )
+    .then((data) => this.setState({added: data.added}) )
     .catch(err => {
       console.log(err);
     });
+    
   }
 
 
-  updateContactList = () => {
-    fetch("https://apiexample.website/contacts", {
-      headers: { API: "zheng" }
-    })
-      .then(res => res.json())
-      .then(data => {
-        this.setState({ contactlist: data.contacts });
-      });
-  };
+  getValue = (event) => {
+
+    event.preventDefault();
+
+    const name = document.querySelector("#name").value;
+    const number = document.querySelector("#number").value;
+
+    this.setState({"name": name, "number": number});
+
+  }
 
 
 
   render() {
     return (
       <div>
-        <form onSubmit>
+        <form onSubmit={this.getValue}>
           <input type="text" id="name" />
           <input type="text" id="number" />
-          <button 
->SUBMIT</button>
+          <button>SUBMIT</button>
         </form>
         <hr />
         <p>{this.state.name}</p>
@@ -65,10 +60,7 @@ const addNumber = document.getElementById("number").value
       </div>
     );
   }
-
 }
-
-
 
 
 

@@ -32,13 +32,7 @@ class Display extends React.Component {
            
          })
        }
-          {
-         this.state.contacts.map((value, index) => {
-           return <p key={index}>{value.number}</p>;
-        
-           
-         })
-       }
+         
       </div>
     );
   }
