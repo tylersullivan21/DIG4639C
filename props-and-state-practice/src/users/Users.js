@@ -25,8 +25,10 @@ class Users extends Component {
     
             ],
         })
+        console.log(this.state.users);
     }
 
+ 
     render(){
         return (<div>
             <button onClick={this.makeMeYounger}>Make us 10 years younger</button>
