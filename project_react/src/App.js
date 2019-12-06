@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import Display from "./components/Display";
-import Addcontact from "./components/addcontact";
+import Add from "./components/addcontact";
 class App extends React.Component {
 constructor(props){
 super(props);
  this.state = {
-  contactS: "",
+  contacts: "",
   profile: "",
   addcontact: "",
   removecontact: ""
@@ -19,7 +19,7 @@ super(props);
     return (
       <div>
         <Display />
-        <Addcontact />
+        <Add />
       </div>
     );
   }

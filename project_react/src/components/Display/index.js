@@ -7,6 +7,8 @@ class Display extends React.Component {
 
     this.state = {contacts: []};
 
+    
+
   }
 
   componentDidMount() {
