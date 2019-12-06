@@ -10,7 +10,7 @@ class Add extends Component {
 
   }
 
- createContact = () => {
+ componentDidMount() {
 
     fetch("https://apiexample.website/contacts/add", {
       "method": "POST",
