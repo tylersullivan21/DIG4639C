@@ -41,15 +41,6 @@ class Users extends Component {
             {name: "John", age:20},
             {name: "Billy", age:30},
             {name: "Amanda", age:40},
-            {name: "John", age:20},
-            {name: "Billy", age:30},
-            {name: "Amanda", age:40},
-            {name: "John", age:20},
-            {name: "Billy", age:30},
-            {name: "Amanda", age:40},
-            {name: "John", age:20},
-            {name: "Billy", age:30},
-            {name: "Amanda", age:40},
 
         ],
         
