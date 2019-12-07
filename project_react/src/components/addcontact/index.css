@@ -1,0 +1,9 @@
+.form-container{
+    background: magenta;
+    display: grid; 
+
+}
+
+,form-items{
+    justify-self: center;
+}

@@ -1,11 +1,9 @@
 import React from "react";
-
-
+import './index.css'
 function AddContact(props) {
-  // console.log(props);
-
   return (
-   <form method="POST"> 
+   <form className="form-container" method="POST"> 
+   <div className="form-items">
 <input type="text" id="name-input" name="name-input">
 
 </input>
@@ -13,7 +11,7 @@ function AddContact(props) {
 <input type="text" id="number-input" name="number-input"></input>
 
 <button type="submit"  onClick={props.createContact}>Create Contact</button>
-
+</div>
 
    </form>
   );
