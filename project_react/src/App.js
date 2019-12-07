@@ -20,9 +20,9 @@ componentDidMount() {
   .then((res) => res.json())
   .then((data) => {
     this.setState({contacts: data.contacts});
-    this.getNewContacts();
+  
   });
-
+  this.getNewContacts();
 }
 
 
