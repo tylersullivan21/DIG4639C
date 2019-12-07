@@ -12,7 +12,7 @@ function AddContact(props) {
 
 <input type="text" id="number-input" name="number-input"></input>
 
-<button type="submit" onClick={props.addContact}></button>
+<button type="submit"  onClick={props.createContact}>Create Contact</button>
 
 
    </form>
