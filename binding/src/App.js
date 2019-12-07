@@ -31,7 +31,7 @@ changeNameFromInput = (newName) => {
 <br />
 <button onClick={this.changeName.bind(this,'Awesome Tyler')}>Change the state</button>
 
-<input type="text" onChange={}></input>
+<input type="text" onChange={this.changeNameFromInput}></input>
   <div>{this.state.name}</div>
     </div>
   );
