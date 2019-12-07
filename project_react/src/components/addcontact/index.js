@@ -1,67 +1,22 @@
-import React, { Component } from 'react';
+import React from "react";
 
 
-class Add extends Component {
+function AddContact(props) {
+  // console.log(props);
 
-  constructor(props) {
-    super(props);
+  return (
+   <form method="POST"> 
+<input type="text" id="name-input" name="name-input">
 
-    this.state = {added: {}};
+</input>
 
-  }
+<input type="text" id="number-input" name="number-input"></input>
 
- componentDidMount() {
-
-    fetch("https://apiexample.website/contacts/add", {
-      "method": "POST",
-      "headers": {
-        "api": "sullivan",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "body": JSON.stringify({
-        "name": this.state.name,
-        "number": this.state.number
-      })
-    })
-    .then(response => response.json() )
-    .then((data) => this.setState({added: data.added}) )
-    .catch(err => {
-      console.log(err);
-    });
-    
-  }
+<button type="submit" onClick={props.addContact}></button>
 
 
-  getValue = (event) => {
-
-    event.preventDefault();
-
-    const name = document.querySelector("#name").value;
-    const number = document.querySelector("#number").value;
-
-    this.setState({"name": name, "number": number});
-
-  }
-
-
-
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.getValue}>
-          <input type="text" id="name" />
-          <input type="text" id="number" />
-          <button>SUBMIT</button>
-        </form>
-        <hr />
-        <p>{this.state.name}</p>
-        <p>{this.state.number}</p>
-      </div>
-    );
-  }
+   </form>
+  );
 }
 
-
-
-export default Add;
+export default AddContact;

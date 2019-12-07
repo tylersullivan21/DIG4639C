@@ -1,7 +1,8 @@
+  
 import React from 'react';
 import './App.css';
 import Display from "./components/Display";
-import Add from "./components/addcontact";
+import AddContact from "./components/addcontact";
 class App extends React.Component {
 constructor(props){
 super(props);
@@ -19,7 +20,7 @@ super(props);
     return (
       <div>
         <Display />
-        <Add />
+        <AddContact />
       </div>
     );
   }
