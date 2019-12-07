@@ -9,10 +9,7 @@ super(props);
  this.state = {
   contacts: "",
   profile: "",
-  addcontact: "",
-  removecontact: ""
 };
-
 }
 
 
@@ -23,9 +20,11 @@ componentDidMount() {
   .then((res) => res.json())
   .then((data) => {
     this.setState({contacts: data.contacts});
+    this.getNewContacts();
   });
-this.getNewProfile();
+
 }
+
 
 
 addEvent = event => {
@@ -55,6 +54,12 @@ addEvent = event => {
   document.getElementById("number-input").value = "";
 };
 
+
+pushContact = () =>{
+
+}
+
+
 getNewContacts = () => {
   fetch("https://apiexample.website/contacts", {
     headers: { API: "sullivan" }
@@ -65,15 +70,9 @@ getNewContacts = () => {
     });
 };
 
-getNewProfile = () => {
-  fetch("https://apiexample.website/profile", {
-    headers: { API: "sullivan" }
-  })
-    .then(res => res.json())
-    .then(data => {
-      this.setState({ profile: data });
-    });
-};
+
+
+
 
   render() {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './display.css'
 class Display extends React.Component {
 
   constructor(props) {
@@ -24,7 +24,7 @@ class Display extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="card-container">
        {
          this.state.contacts.map((value, index) => {
            return <p key={index}>{value.name}</p>;
