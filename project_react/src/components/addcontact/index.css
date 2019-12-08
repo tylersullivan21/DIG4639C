@@ -1,9 +1,14 @@
 .form-container{
-    background: magenta;
+   
     display: grid; 
+    grid-template-columns: 20% 1fr 1fr 1fr 20%;
 
 }
 
-,form-items{
-    justify-self: center;
+.form-items{
+    grid-column: 3/4;
+}
+h2{
+    font-size: 20px;
+    text-align: center;
 }
