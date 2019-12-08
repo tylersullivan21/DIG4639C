@@ -8,8 +8,8 @@ function Profile(props) {
             <h2>Your Profile Name and Number of Contacts in your Contact Book!</h2>
                 <div class="card">
                     <div class="card-content">
-                        <h5 class="card-header">{props.profile.name}</h5>
-                        <h6 class="card-para">{props.profile.count}</h6>
+                        <p class="card-header">{props.profile.name}</p>
+                        <p class="card-para">{props.profile.count}</p>
                     </div>
                 </div>
         </div>

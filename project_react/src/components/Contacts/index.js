@@ -10,8 +10,8 @@ const ContactList = ({ contacts }) => {
             {contacts.map((contact) => (
                 <div class="card">
                     <div class="card-content">
-                        <h5 class="card-header">{contact.name}</h5>
-                        <h6 class="card-para">{contact.number}</h6>
+                        <p class="card-header">{contact.name}</p>
+                        <p class="card-para">{contact.number}</p>
                     </div>
                 </div>
             ))}
