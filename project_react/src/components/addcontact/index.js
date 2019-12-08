@@ -9,8 +9,9 @@ function AddContact(props) {
      <label for="name-input">Name:</label>
 <input type="text" id="name-input" name="name-input">
 
-</input>
+</input><br/>
 <label for="number-input">Number:</label>
+
 <input type="text" id="number-input" name="number-input"></input>
 
 <button type="submit"  onClick={props.createContact}>Create Contact</button>
